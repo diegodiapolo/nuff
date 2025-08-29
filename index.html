@@ -11,22 +11,37 @@
       padding: 0;
       height: 100%;
       width: 100%;
-      background: #ffffff;
-      display: flex;
-      align-items: center;   /* centra verticalmente */
-      justify-content: center; /* centra horizontalmente */
+      background: #ffffff; /* Fondo blanco */
     }
-    img {
-      max-width: 320px;
-      height: auto;
+    /* Contenedor centrado en toda la ventana */
+    .center {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Tamaño máximo del logo y cursor clicable */
+    .logo svg {
       display: block;
+      width: min(80vw, 420px);
+      height: auto;
+    }
+    .logo {
       cursor: pointer;
+    }
+    /* Fuerza el color gris del logo (paths, shapes, strokes) */
+    .logo svg *, .logo svg {
+      fill: #6b7280 !important;   /* gris medio */
+      stroke: #6b7280 !important;
     }
   </style>
 </head>
 <body>
-  <a href="https://www.instagram.com/nuff.nuff.nuff.nuff?igsh=MW5wdDlvbjFiM3A0OA==" target="_blank" rel="noopener">
-    <img src="Nuff_logo_web.svg" alt="Nuff Logo" />
-  </a>
+  <main class="center">
+    <a class="logo" href="https://www.instagram.com/nuff.nuff.nuff.nuff?igsh=MW5wdDlvbjFiM3A0OA==" target="_blank" rel="noopener" aria-label="Ir al Instagram de Nuff">
+      <!-- SVG inline para asegurar que siempre se muestre y poder recolorearlo a gris -->
+      REPLACE_INLINE_SVG
+    </a>
+  </main>
 </body>
 </html>
